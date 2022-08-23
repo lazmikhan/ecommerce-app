@@ -1,0 +1,31 @@
+.shop{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.map-product{
+    display: grid;
+    grid-template-columns: repeat(3 , 3fr);
+    grid-gap:5px;
+
+   padding: 5px;
+
+}
+.cart{
+    background-color: red;
+    padding: 20px;
+    color: rgb(251, 245, 245);
+    height: fit-content;
+    
+
+   margin-bottom: 200px;
+}
+
+@media screen and (max-width:1100px)
+{
+    .map-product{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+}

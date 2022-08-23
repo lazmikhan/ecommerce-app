@@ -1,0 +1,35 @@
+.product-img{
+    width: 200px;
+    border-radius: 9px;
+}
+.prod{
+    border: 3px solid rgb(113, 98, 98);
+    background-color: rgb(232, 225, 216);
+    position: relative;
+    border-radius: 9px;
+    width: 210px;
+}
+.btn{
+   width: 100%;
+
+   background-color: rgb(146, 220, 97);
+   border-radius: 6px ;
+   border: 1px solid  rgb(146, 220, 97);
+   padding: 6px;
+position: absolute;
+left:0px;
+bottom: 0px;
+
+
+
+
+
+}
+p{
+    font-size: small;
+    text-align: left;
+}
+.desc{
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
