@@ -5,6 +5,7 @@ import useProducts from '../../hooks/useProducts';
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import '../Shop/Shop.css'
+import ManageOne from '../ManageOne.js/ManageOne';
 const Manage = () => {
   
      const [products, setProducts]= useProducts();
@@ -53,18 +54,26 @@ for(let quanTotal of cart)
         
            
            <div className='product'>
-            Items in the cart 
+            <h3>Items in the cart </h3>
 
             <br />
         {
-            cart.map(product=><li >{product.name.substring(0,20)}  X {product.quantity}<button onClick={()=>{
+            cart.map(product=><ManageOne cart={product} deleteProduct={()=>{
                 deleteProduct(product.id)
-            }}>delete</button></li>)
+            }} ></ManageOne>)
         }
+
+        {/* {
+            <li >{product.name.substring(0,20)}  X {product.quantity}<button onClick={()=>{
+                deleteProduct(product.id)
+            }}>delete</button></li>
+        } */}
 
            </div>
            <div className='cart'>
- <Cart clearCart={deleteCart}   cart={cart}></Cart> 
+ <Cart clearCart={()=>{
+    deleteCart(products)
+ }}   cart={cart}></Cart> 
  <Link to="/inventory"><button>Proceed Checkout</button></Link>
            </div>
         </div>

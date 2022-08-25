@@ -8,8 +8,9 @@ const {handleAddToCart}=props;
         <div className='prod'>
             <div className='desc'>
             {/* <img className='product-img' src={img} alt="" /> */}
-
+            <img src={img} alt="" srcset="" />
 <p className='name'> Product Name: {name}</p>
+
 <p>Category : {category}</p>
 <p>Price : {price}</p>
 <p>Rating: {ratings}</p>
