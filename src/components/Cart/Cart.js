@@ -31,7 +31,7 @@ q=q+qt.quantity;
                   <b>Order Summary</b>
              <p><b>Number of items :</b>{q}</p> 
              <p><b>Price :</b> {sum}</p>  
-             <p><b>Taxes :</b> {taxes}</p> 
+             <p><b>Taxes :</b> {taxes.toFixed(2)}</p> 
         <p><b>Grandtotal :</b> {total}</p>
                 <button onClick={()=>{
                   props.clearCart(props.cart)

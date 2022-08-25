@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useCart from '../../hooks/useCart';
+import { Link } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
@@ -64,6 +65,7 @@ for(let quanTotal of cart)
            </div>
            <div className='cart'>
  <Cart clearCart={deleteCart}   cart={cart}></Cart> 
+ <Link to="/inventory"><button>Proceed Checkout</button></Link>
            </div>
         </div>
     );

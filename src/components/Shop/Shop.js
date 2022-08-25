@@ -1,31 +1,23 @@
 import React, { createRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { addToDb, getStoredCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product.js/Product';
 import './Shop.css'
 const Shop = () => {
-    const [open , setOpen]= useState(true);
+  
 
-    const onOpen=()=>{
-       if(open){
-        console.log(open);
-        setOpen(false);
-        
-    
-        
-       } 
-       else if(!open){
-        console.log(open)
-        setOpen(true);
-       
-       } 
-        
-    }
+ 
     const [products , setProducts]= useState([]);
     const [cart, setCart]= useState([]);
     var [number , setNumber]= useState(0);
+    const deleteCart=(products)=>{
+        deleteShoppingCart();
+    products=[];
+    
+    setCart(products);
+    }
     useEffect(()=>{
 
         fetch('products.json').then(res=>res.json()).then(data=>setProducts(data));
@@ -100,7 +92,7 @@ var taxes = sum*tax;
                         </div> 
                         <div className='cart'>
                            
-       <Cart  cart={cart}>
+       <Cart clearCart={deleteCart}  cart={cart}>
   <Link to="/manage"><button>Review Item</button></Link>
        </Cart>
        
