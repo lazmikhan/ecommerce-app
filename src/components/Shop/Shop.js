@@ -6,7 +6,23 @@ import Cart from '../Cart/Cart';
 import Product from '../Product.js/Product';
 import './Shop.css'
 const Shop = () => {
+    const [open , setOpen]= useState(true);
 
+    const onOpen=()=>{
+       if(open){
+        console.log(open);
+        setOpen(false);
+        
+    
+        
+       } 
+       else if(!open){
+        console.log(open)
+        setOpen(true);
+       
+       } 
+        
+    }
     const [products , setProducts]= useState([]);
     const [cart, setCart]= useState([]);
     var [number , setNumber]= useState(0);
@@ -35,6 +51,7 @@ const Shop = () => {
 
 var click=1;
 var sum=0;
+var total=0;
 const tax =0.2;
 let quantity =0;
 var grandTOtal;
@@ -71,6 +88,7 @@ var taxes = sum*tax;
             
                 return (
                     <div className='shop'>
+                       
                      <div className='product'>
                       
                
@@ -80,7 +98,7 @@ var taxes = sum*tax;
                         </div> 
                         <div className='cart'>
                            <h3> Order summary</h3>
-        {cart.map(oneItem=><Cart name={oneItem.name} price={oneItem.price} img={oneItem.img} quantity={oneItem.quantity}  stateChange={click++} cart={cart}></Cart>)}
+       <Cart cart={cart}></Cart>
                             <h4>Total Price:$ {sum}</h4>
                             <h4>Taxes:${taxes}</h4>
                             <h3 className='margin'>Grand Total:$ {grandTOtal}</h3>

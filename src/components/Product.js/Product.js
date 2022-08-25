@@ -7,7 +7,7 @@ const {handleAddToCart}=props;
     return (
         <div className='prod'>
             <div className='desc'>
-            <img className='product-img' src={img} alt="" />
+            {/* <img className='product-img' src={img} alt="" /> */}
 
 <p className='name'> Product Name: {name}</p>
 <p>Category : {category}</p>
