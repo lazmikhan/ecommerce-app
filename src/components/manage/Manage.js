@@ -10,7 +10,7 @@ const Manage = () => {
      const [cart, setCart] =useCart(products);
      let sum=0;
 
-const deleteCart=(products)=>{
+ const deleteCart=(products)=>{
     deleteShoppingCart();
 products=[];
 

@@ -5,6 +5,7 @@ const Cart = (props) => {
   var sum=0;
   var total=0;
   let tax =0.2;
+  
 let q=0;
 let {price , img, quantity}=props.cart;
 for(let oneItem of props.cart)
@@ -29,13 +30,15 @@ q=q+qt.quantity;
                 <div>
                   <b>Order Summary</b>
              <p><b>Number of items :</b>{q}</p> 
-             <p><b>Taxes :</b> {sum}</p>  
+             <p><b>Price :</b> {sum}</p>  
              <p><b>Taxes :</b> {taxes}</p> 
         <p><b>Grandtotal :</b> {total}</p>
                 <button onClick={()=>{
                   props.clearCart(props.cart)
                 }}>Clear Cart</button>
-                <button>Review Item</button>   
+
+                {props.children}
+                 
                    
                 </div>
             );

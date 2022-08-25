@@ -1,5 +1,5 @@
 import React, { createRef } from 'react';
-
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
@@ -60,6 +60,8 @@ var grandTOtal;
    let newItems=[];
    if(!exists)
    {
+
+    
     selectedProduct.quantity= 1;
     newItems= [...cart, selectedProduct];
    }
@@ -97,11 +99,12 @@ var taxes = sum*tax;
                     
                         </div> 
                         <div className='cart'>
-                           <h3> Order summary</h3>
-       <Cart cart={cart}></Cart>
-                            <h4>Total Price:$ {sum}</h4>
-                            <h4>Taxes:${taxes}</h4>
-                            <h3 className='margin'>Grand Total:$ {grandTOtal}</h3>
+                           
+       <Cart  cart={cart}>
+  <Link to="/manage"><button>Review Item</button></Link>
+       </Cart>
+       
+                        
                  
                             </div>  
                     </div>
