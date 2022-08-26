@@ -16,6 +16,7 @@ for(let oneItem of props.cart)
 var taxes = sum*tax;
 total= sum+(sum *tax);
 
+
 for(let qt of props.cart)
 {
 q=q+qt.quantity;

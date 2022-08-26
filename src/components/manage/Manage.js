@@ -49,6 +49,7 @@ for(let quanTotal of cart)
   sum= sum+ parseInt(quanTotal.quantity);
 }
 
+
     return (
         <div className='shop'>
         
@@ -63,21 +64,18 @@ for(let quanTotal of cart)
             }} ></ManageOne>)
         }
 
-        {/* {
-            <li >{product.name.substring(0,20)}  X {product.quantity}<button onClick={()=>{
-                deleteProduct(product.id)
-            }}>delete</button></li>
-        } */}
+      
 
            </div>
            <div className='cart'>
  <Cart clearCart={()=>{
     deleteCart(products)
  }}   cart={cart}></Cart> 
- <Link to="/inventory"><button>Proceed Checkout</button></Link>
+ <Link  to="/inventory"><button>Proceed Checkout</button></Link>
            </div>
         </div>
     );
+
 };
 
 export default Manage;

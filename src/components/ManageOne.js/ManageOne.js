@@ -5,7 +5,7 @@ const ManageOne = (props) => {
 const    {id,name , img , ratings,quantity}= props.cart;
 console.log(props);
     return (
-        <div style={{border:"2px solid black", textAlign:"left", display:"flex", marginLeft:"30%", marginRight:"20%", justifyContent:"space-between"}}>
+        <div style={{border:"2px solid black", textAlign:"left", display:"flex", marginLeft:"30%", marginRight:"20%", justifyContent:"space-between", marginBottom:"2px"}}>
             <img src={img} alt="" />
           <div>  <h5>Name: {name} </h5>
            <h5>Quantity:{quantity}</h5>
