@@ -38,7 +38,7 @@ q=q+qt.quantity;
                   props.clearCart(props.cart)
                 }}>Clear Cart</button>
 
-                {props.children}
+{props.children}
                  
                    
                 </div>

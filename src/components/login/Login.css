@@ -1,0 +1,8 @@
+button{
+    border-radius: 6px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: orange;
+    color: white;
+    width: 50%;
+}

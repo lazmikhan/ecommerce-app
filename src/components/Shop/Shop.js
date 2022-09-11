@@ -11,7 +11,9 @@ const Shop = () => {
  
     const [products , setProducts]= useState([]);
     const [cart, setCart]= useState([]);
-    var [number , setNumber]= useState(0);
+    const [command, setCommand]= useState("");
+   
+   
     const deleteCart=(products)=>{
         deleteShoppingCart();
     products=[];
@@ -78,7 +80,10 @@ var taxes = sum*tax;
           grandTOtal= sum+(sum *tax);
 
         
-
+if(cart.length==0)
+{
+ 
+}
             
                 return (
                     <div className='shop'>
@@ -87,11 +92,13 @@ var taxes = sum*tax;
                       
                
             
-                     <div className='map-product'>{products.map(product=><Product key={product.id} handleAddToCart={btnClick} product={product}></Product>)}</div>
+                     <div className='map-product'>{products.map(product=><Product key={product.id} handleAddToCart={btnClick} product={product}></Product>)}
+                     
+                     </div>
                     
                         </div> 
                         <div className='cart'>
-                           
+                          
        <Cart clearCart={deleteCart}  cart={cart}>
   <Link to="/manage"><button>Review Item</button></Link>
        </Cart>
