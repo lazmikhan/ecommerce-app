@@ -13,7 +13,7 @@ const Header = () => {
           <img className='logo' src={logo} alt="" />
 {user?.uid?<>
   <h5 className='mt-2'>{user.displayName}</h5>
-  <button onClick={handleSignOut}>Sign Out</button>
+  <button onClick={handleSignOut}>Sign. Out</button>
 </>: <>
 <CustomLink to='/login'>Login </CustomLink>
 <CustomLink to='/register'>Register </CustomLink>
